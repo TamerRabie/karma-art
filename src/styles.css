@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+/* Karma Art Project Styles */
+@import "assets/styles/karma.main.css";
+@import "assets/styles/karma.grid.css";
+@import "assets/styles/karma.utilities.css";
+@import "assets/styles/karma.animation.css";
+@import "assets/styles/karma.home.css";
+@import "assets/styles/karma.admin.css";
+

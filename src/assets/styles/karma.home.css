@@ -1,0 +1,142 @@
+@import "karma.variables.css";
+
+.karma-home {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  height: auto;
+  min-height: 67vh;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+  background: transparent;
+  overflow: hidden;
+}
+
+
+/***********************************************************************************
+ ************************** Global Classes *****************************************
+/***********************************************************************************/
+.width-full {
+  width: 100% !important;
+}
+
+.min-width-full {
+  min-width: 100% !important;
+}
+
+.width-0 {
+  width: 0 !important;
+}
+
+.width-50 {
+  width: 50px !important
+}
+
+.width-200 {
+  width: 200px !important
+}
+
+.width-230 {
+  width: 230px !important
+}
+
+.height-full {
+  height: 100% !important
+}
+
+.margin-left-0 {
+  margin-left: 0 !important
+}
+
+.margin-left-50 {
+  margin-left: 50px !important
+}
+
+.margin-left-200 {
+  margin-left: 200px !important
+}
+
+.margin-left-230 {
+  margin-left: 230px !important
+}
+
+.div-disabled input[type=text],
+.div-disabled input[type=password],
+.div-disabled input[type=email],
+.div-disabled input[type=checkbox],
+.div-disabled input[type=radio],
+.div-disabled select,
+.div-disabled textarea,
+.div-disabled .mat-form-field,
+.div-disabled table,
+.div-disabled ul,
+.div-disabled button,
+.div-disabled a,
+.div-disabled .mat-checkbox {
+  pointer-events: none !important;
+  opacity: 0.7 !important;
+  cursor: not-allowed !important;
+}
+
+.div-overlay {
+  opacity: 0.75;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+  cursor: pointer;
+}
+
+.app-loader {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.09);
+  z-index: 1060;
+  height: auto;
+  min-height: 100%;
+}
+
+.absolute-position {
+  position: absolute !important
+}
+
+.fixed-position {
+  position: fixed !important
+}
+
+.app-progressBar {
+  width: 100%;
+  height: 4px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.spacer {
+  flex: 1;
+}
+
+
+/***********************************************************************************
+ ************************** Messages Dialogs ***************************************
+/***********************************************************************************/
+.mat-dialog-container {
+  padding: 10px !important
+}
+

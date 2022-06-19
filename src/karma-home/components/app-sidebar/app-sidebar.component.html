@@ -1,0 +1,16 @@
+<aside [ngClass]="show ? 'app-sidebar-open' : 'app-sidebar-close'" class="app-sidebar ">
+  <div class="app-sidebar-header">
+    <label class="navbar-brand">KARMA ART</label>
+    <div class="spacer"></div>
+    <a (click)="onClose()" class="close-appSidebar">X</a>
+  </div><!-- app-sidebar-header End -->
+  <div class="app-sidebar-list">
+    <mat-selection-list [multiple]="false">
+      <mat-list-option (click)="onSelect(link)"
+                       *ngFor="let link of headerLinks"
+                       [selected]="link.isActive">
+        {{link.name}}
+      </mat-list-option>
+    </mat-selection-list>
+  </div><!-- app-sidebar-list End -->
+</aside><!-- app-sidebar End -->
