@@ -1,4 +1,16 @@
 :root {
+  --screen-xs: 320px;
+  --screen-sm: 576px;
+  --screen-md: 768px;
+  --screen-lg: 992px;
+  --screen-xl: 1200px;
+  --screen-xxl: 1400px;
+  --home-max-width: 1400px;
+  --admin-sidebar-open: 230px;
+  --admin-sidebar-close: 50px;
+  --admin-wrapper-push-left: 230px;
+  --admin-wrapper-pull-right: 50px;
+
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -7,7 +19,8 @@
   --bs-orange: #fd7e14;
   --bs-yellow: #ffc107;
   --bs-green: #198754;
-  --bs-teal: #20c997;
+  --bs-teal: #39cccc;
+  --teal-active: #30bbbb;
   --bs-cyan: #0dcaf0;
   --bs-black: #000;
   --bs-white: #fff;
@@ -44,6 +57,8 @@
   --dark-rgb: 33, 37, 41;
   --white-rgb: 255, 255, 255;
   --black-rgb: 0, 0, 0;
+  --linkedin: #3b525e;
+  --linkedin-active: rgb(40, 62, 74);
 
   --font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -75,6 +90,6 @@
   --body-bg: #fff;
   --body-color-rgb: 33, 37, 41;
   --body-bg-rgb: 255, 255, 255;
-  --body-font-weight: var(--font-weight-500);
+  --body-font-weight: var(--font-weight-400);
   --body-text-align: left;
 }

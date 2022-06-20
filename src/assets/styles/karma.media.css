@@ -1,0 +1,96 @@
+@import "karma.variables.css";
+
+@media screen and (max-width: 992px) {
+  .announcement-div label {
+    font-size: 1.4rem !important;
+  }
+
+  .app-nav {
+    display: none !important;
+  }
+
+  .app-header-logo {
+    order: 1;
+    width: 100%;
+  }
+
+  .app-header-logo img {
+    height: 100px !important;
+  }
+
+  .app-header-buttons {
+    justify-content: space-between;
+    order: 2;
+    width: 100%;
+    padding: 0 5px 3px 3px;
+  }
+
+  .app-header-buttons .menu-link {
+    display: block !important;
+  }
+
+  .app-header-buttons .header-buttons button {
+    margin: 0 0 0 10px !important;
+  }
+
+  .app-header-links {
+    order: 3;
+    width: 100%;
+    padding: 0;
+  }
+
+  .app-footer {
+    justify-content: flex-start !important;
+  }
+
+  .app-footer ul {
+    width: 100% !important;
+  }
+
+  .app-footer .input-group {
+    max-width: 400px !important;
+  }
+
+  .admin-header-links button {
+    margin: 0 0 0 10px !important;
+  }
+
+  .admin-sidebar .mat-list-option {
+    height: 38px !important;
+    font-size: 1.3rem !important;
+  }
+
+  .admin-sidebar .mat-icon {
+    font-size: 20px !important;
+    width: 20px !important;
+    height: 20px !important;
+    line-height: 20px !important;
+  }
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .app-header-logo {
+    width: 15% !important;
+  }
+
+  .app-header-logo img {
+    height: 100px !important;
+  }
+
+  .app-header-links {
+    width: 65% !important;
+  }
+
+  .app-header-links .app-nav .mat-tab-link {
+    min-width: 126px !important;
+  }
+
+  .app-header-buttons {
+    width: 20% !important;
+  }
+
+  .app-header-buttons .header-buttons button {
+    margin: 0 0 0 7px !important;
+  }
+}

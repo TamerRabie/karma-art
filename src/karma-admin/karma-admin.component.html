@@ -1,1 +1,11 @@
-<p>karma-admin works!</p>
+<div class="admin-main">
+  <admin-header (toggleSidebar)="adminService.toggleSideBar()"
+                [anonymousAvatar]="adminService.anonymousAvatar"
+                [user]="authService.appUser$ | async"></admin-header>
+  <admin-wrapper [wrapperStyle]="adminService.wrapperStyle$ | async"></admin-wrapper>
+  <admin-sidebar (activeLink)="adminService.onAdminLinksChanged($event)"
+                 [adminSideBarLinks]="adminService.adminSideBarLinks"
+                 [sidebarStyle]="adminService.sidebarStyle$ | async"></admin-sidebar>
+</div><!-- admin-main End -->
+<app-overlay (closeSideBar)="adminService.toggleSideBar()" [show]="adminService.isSidebarOpen$ | async"></app-overlay>
+<admin-footer></admin-footer>

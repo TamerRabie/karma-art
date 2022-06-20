@@ -1,0 +1,57 @@
+<header class="admin-header ">
+  <button (click)="onToggle()" mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div class="admin-header-links">
+    <button mat-icon-button>
+      <mat-icon>settings</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon [matBadgeHidden]="false"
+                [matBadge]="15"
+                matBadgeColor="warn"
+                matBadgeSize="small">notifications_none
+      </mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon [matBadgeHidden]="false"
+                [matBadge]="99"
+                matBadgeColor="warn"
+                matBadgeSize="small">mail_outline
+      </mat-icon>
+    </button>
+    <button *ngIf="anonymousAvatar" [matMenuTriggerFor]="adminMenu" class="avatar" mat-icon-button>
+      <img [src]="anonymousAvatar" alt=""/>
+    </button>
+    <mat-menu #adminMenu="matMenu" xPosition="before">
+      <div class="avatar-header">
+        <img *ngIf="anonymousAvatar" [src]="anonymousAvatar" alt=""/>
+        <div class="avatar-header-info">
+          <span>Tamer Rabie</span>
+          <span>Since April 24, 2018</span>
+        </div>
+      </div><!-- avatar-header End -->
+      <button class="menu-dense" mat-menu-item>
+        <mat-icon>receipt</mat-icon>
+        <span>Purchases and reviews</span>
+      </button>
+      <button class="menu-dense" mat-menu-item>
+        <mat-icon>mail_outline</mat-icon>
+        <span>Messages</span>
+      </button>
+      <button class="menu-dense" mat-menu-item>
+        <mat-icon>account_box</mat-icon>
+        <span>View Profile</span>
+      </button>
+      <button (click)="appRoutesService.adminRoute()" class="menu-dense" mat-menu-item>
+        <mat-icon>settings</mat-icon>
+        <span>Admin Dashboard</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button class="menu-dense" mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Sign out</span>
+      </button>
+    </mat-menu>
+  </div><!-- admin-header-links End -->
+</header>

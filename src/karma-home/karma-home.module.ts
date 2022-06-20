@@ -16,6 +16,12 @@ import {AppFooterComponent} from "./components/app-footer/app-footer.component";
 import {MatListModule} from "@angular/material/list";
 import {MatDialogModule} from "@angular/material/dialog";
 import {SharedModule} from "../shared/shared.module";
+import {MatTabsModule} from "@angular/material/tabs";
+import {MatBadgeModule} from "@angular/material/badge";
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
+import {MatTooltipModule} from "@angular/material/tooltip";
+import {MatMenuModule} from "@angular/material/menu";
 
 @NgModule({
   declarations: [
@@ -35,7 +41,13 @@ import {SharedModule} from "../shared/shared.module";
     SharedModule,
     KarmaHomeRoutingModule,
     MatListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTabsModule,
+    MatBadgeModule,
+    MatIconModule,
+    MatButtonModule,
+    MatTooltipModule,
+    MatMenuModule
   ],
   providers: [
     HomeService

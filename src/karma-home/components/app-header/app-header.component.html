@@ -1,0 +1,93 @@
+<header class="app-header ">
+  <div class="app-header-logo">
+    <a (click)="appRoutesService.shopRoute()">
+      <img [src]="logo" alt="">
+    </a>
+  </div><!-- app-header-logo End -->
+
+  <div class="app-header-links ">
+    <div class="input-group">
+      <input class="form-control form-control-lg" placeholder="Search ...."
+             type="text">
+      <button class="btn btn-outline-secondary" type="button">
+        <i class="bi bi-search"></i>
+      </button>
+    </div><!-- input-group End -->
+    <nav class="app-nav" color="warn" mat-tab-nav-bar>
+      <a (click)="onSelect(link)" *ngFor="let link of headerLinks"
+         [active]="link.isActive"
+         mat-tab-link>
+        {{link.name}}
+      </a>
+    </nav><!-- app-nav End -->
+  </div><!-- app-header-links End -->
+
+  <div class="app-header-buttons ">
+    <div class="menu-link">
+      <button (click)="onOpen()" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div><!-- menu-link End -->
+    <div class="header-buttons">
+      <button mat-icon-button
+              matTooltip="Change Language"
+              matTooltipClass="tooltip-class">
+        <mat-icon>language</mat-icon>
+      </button>
+      <button mat-icon-button
+              matTooltip="Shopping Basket"
+              matTooltipClass="tooltip-class">
+        <mat-icon [matBadgeHidden]="false"
+                  matBadge="8"
+                  matBadgeColor="warn"
+                  matBadgeSize="small">shopping_basket
+        </mat-icon>
+      </button>
+      <button mat-icon-button
+              matTooltip="Your Favorite"
+              matTooltipClass="tooltip-class">
+        <mat-icon [matBadgeHidden]="false"
+                  matBadge="18"
+                  matBadgeColor="warn"
+                  matBadgeSize="small">favorite_border
+        </mat-icon>
+      </button>
+      <button [matMenuTriggerFor]="avatarMenu" class="avatar" mat-icon-button>
+        <img *ngIf="anonymousAvatar" [src]="anonymousAvatar" alt=""/>
+      </button>
+    </div>
+    <mat-menu #avatarMenu="matMenu" xPosition="before">
+      <div class="avatar-header">
+        <img *ngIf="anonymousAvatar" [src]="anonymousAvatar" alt=""/>
+        <div class="avatar-header-info">
+          <span>Tamer Rabie</span>
+          <span>Since April 24, 2018</span>
+        </div>
+      </div><!-- avatar-header End -->
+      <mat-divider></mat-divider>
+      <button class="menu-dense" mat-menu-item>
+        <mat-icon>receipt</mat-icon>
+        <span>Purchases and reviews</span>
+      </button>
+      <button class="menu-dense" mat-menu-item>
+        <mat-icon>mail_outline</mat-icon>
+        <span>Messages</span>
+      </button>
+      <button class="menu-dense" mat-menu-item>
+        <mat-icon>account_box</mat-icon>
+        <span>View Profile</span>
+      </button>
+      <button class="menu-dense" mat-menu-item>
+        <mat-icon>settings</mat-icon>
+        <span>Admin Dashboard</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button class="menu-dense" mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Sign out</span>
+      </button>
+
+
+    </mat-menu>
+  </div><!-- app-header-buttons End -->
+</header>

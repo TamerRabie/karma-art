@@ -792,7 +792,7 @@ progress {
 }
 
 .form-control:focus {
-  border-color: #86b7fe;
+  border-color: var(--bs-blue);
   outline: 0;
   box-shadow: none;
 }
@@ -803,12 +803,12 @@ progress {
 
 .form-control::-moz-placeholder {
   color: #6c757d;
-  opacity: 1;
+  opacity: 0.75;
 }
 
 .form-control::placeholder {
   color: #6c757d;
-  opacity: 1;
+  opacity: 0.75;
 }
 
 .form-control:disabled, .form-control[readonly] {
@@ -989,7 +989,7 @@ textarea.form-control-lg {
 }
 
 .form-select:focus {
-  border-color: #86b7fe;
+  border-color: var(--bs-blue);
   outline: 0;
   box-shadow: none;
 }
@@ -1079,7 +1079,7 @@ textarea.form-control-lg {
 }
 
 .form-check-input:focus {
-  border-color: #86b7fe;
+  border-color: var(--bs-blue);
   outline: 0;
   box-shadow: none;
 }

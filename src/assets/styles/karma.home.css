@@ -1,5 +1,7 @@
 @import "karma.variables.css";
-
+/***********************************************************************************
+ ********************8******** Home Classes ****************************************
+/***********************************************************************************/
 .karma-home {
   position: relative;
   width: 100%;
@@ -11,6 +13,431 @@
   text-align: left;
   background: transparent;
   overflow: hidden;
+}
+
+.announcement-div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 34px;
+  padding: 3px 10px;
+  background: var(--bs-red);
+}
+
+.announcement-div label {
+  width: 100%;
+  min-width: 100%;
+  color: var(--bs-white);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.app-header {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  padding: 0 5px;
+  background: transparent;
+}
+
+.app-header-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+
+.app-header-logo img {
+  height: 150px;
+}
+
+.app-header-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  width: 50%;
+  padding: 10px 0 0 0;
+}
+
+.app-header-links .input-group > .form-control {
+  height: 40px;
+}
+
+.app-header-links .input-group > .btn {
+  padding: 0.5rem 2rem;
+}
+
+.app-header-links .app-nav .mat-tab-link {
+  height: 43px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  min-width: 132px;
+  padding: 0 20px;
+  color: var(--body-color);
+  opacity: 1;
+  letter-spacing: normal;
+}
+
+.app-header-links .app-nav .mat-tab-link:hover {
+  text-decoration: none;
+  opacity: 1;
+  color: var(--bs-red);
+  background: var(--bs-light);
+}
+
+.app-header-links .app-nav .mat-tab-link.mat-tab-label-active {
+  opacity: 1;
+  color: var(--bs-red);
+  background: var(--bs-light);
+}
+
+.app-header-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  width: 25%;
+  padding: 10px 0 0 0;
+}
+
+.app-header-buttons .menu-link {
+  display: none;
+}
+
+.app-header-buttons .header-buttons button {
+  margin: 0 0 0 15px;
+}
+
+.app-header-buttons .avatar, .admin-header .avatar {
+  padding: 0 !important;
+  width: 34px;
+  height: 34px;
+  line-height: 28px;
+}
+
+.app-header-buttons .avatar img, .admin-header .avatar img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.avatar-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 3px 10px 10px 10px;
+  line-height: 15px;
+  min-width: 190px;
+  max-width: 250px;
+  overflow-x: auto;
+}
+
+.avatar-header img {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+}
+
+.avatar-header .avatar-header-info {
+  padding: 0 0 0 8px;
+}
+
+.avatar-header .avatar-header-info span:first-of-type {
+  display: block;
+  font-size: 1.37rem;
+  margin: 0 5px 3px 0
+}
+
+.avatar-header .avatar-header-info span:last-of-type {
+  display: block;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.menu-dense {
+  font-family: var(--body-font-family) !important;
+  font-size: var(--body-font-size) !important;
+  font-weight: var(--font-weight-400) !important;
+  line-height: 35px !important;
+  height: 35px !important;
+  padding: 0 10px !important;
+  color: var(--body-color) !important;
+  opacity: 1 !important;
+}
+
+.menu-dense .mat-icon {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  line-height: 17px;
+  color: var(--body-color) !important;
+  margin: 0 10px 0 0 !important;
+}
+
+.app-sidebar-open {
+  width: var(--admin-sidebar-open);
+}
+
+.app-sidebar-close {
+  width: 0;
+}
+
+.app-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10001;
+  height: 100%;
+  max-width: var(--admin-sidebar-open);
+  background: var(--body-bg);
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: 0.4s;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+.app-sidebar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  height: 40px;
+  padding: 0 0 0 10px;
+  width: var(--admin-sidebar-open);
+  min-width: var(--admin-sidebar-open);
+  border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.app-sidebar-header .navbar-brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--bs-red);
+  padding: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3), 0 -4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.app-sidebar-header .close-appSidebar {
+  display: inline-block;
+  padding: 10px 15px;
+  color: var(--bs-red);
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.app-sidebar-list {
+  width: var(--admin-sidebar-open);
+  min-width: var(--admin-sidebar-open);
+  overflow: hidden;
+}
+
+.app-sidebar-list .mat-list-base {
+  padding: 0;
+}
+
+.app-sidebar-list .mat-list-base .mat-list-option {
+  font-size: 1.3rem;
+  font-weight: 500;
+  height: 40px;
+}
+
+.app-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  padding: 15px 10px;
+  background: var(--linkedin-active);
+}
+
+.app-footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.app-footer li {
+  padding: 0 0 10px 0;
+  color: var(--bs-white);
+}
+
+.app-footer li:not(:first-of-type) {
+  margin-left: 15px
+}
+
+.app-footer li .bi {
+  margin: 0 5px 0 0;
+}
+
+.app-footer h4 {
+  font-weight: 400;
+  color: var(--bs-teal);
+}
+
+.app-footer p {
+  color: var(--bs-white);
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0 0 4px 0;
+}
+
+.app-footer span, .app-footer a {
+  color: var(--bs-white) !important;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.app-footer a:hover {
+  text-decoration: underline;
+  color: var(--bs-teal) !important;
+}
+
+.app-footer .li-icons .bi {
+  font-size: 1.6rem;
+  font-weight: 400 !important;
+  margin: 0;
+}
+
+.app-footer .li-icons a:not(:last-of-type) {
+  margin: 0 20px 0 0;
+}
+
+.copyrights-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  width: 100%;
+  min-width: 100%;
+  height: 30px;
+  padding-bottom: 2px;
+  background: var(--body-bg);
+  overflow: hidden;
+}
+
+.copyrights-div label {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.copyrights-div span {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--bs-red);
+  margin-left: 5px;
+}
+
+
+/***********************************************************************************
+ **************************** Admin Classes ****************************************
+/***********************************************************************************/
+.admin-main {
+  position: relative;
+  width: auto;
+  height: auto;
+  min-height: 95vh;
+  padding: 0;
+  text-align: left;
+  background: transparent;
+  overflow: hidden;
+}
+
+.admin-wrapper {
+  transition: 0.3s;
+  padding: 50px 10px 10px 10px;
+  background: transparent;
+}
+
+.admin-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row nowrap;
+  background: var(--bs-light);
+  z-index: 1060;
+  padding: 0 15px 0 5px;
+  border-bottom: 1px solid var(--bs-gray-200);
+  /*box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);*/
+}
+
+.admin-header-links button {
+  margin: 0 0 0 15px;
+}
+
+.admin-header button:hover {
+  color: var(--teal-active);
+}
+
+
+.admin-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin-top: 45px;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: var(--linkedin-active);
+  transition: 0.3s;
+  /*border-top: 1px solid #f2f2f2;*/
+  z-index: 10001;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+.admin-sidebar .mat-list-base {
+  z-index: 1000;
+  padding: 0;
+  min-width: 230px;
+}
+
+.admin-sidebar .mat-list-option {
+  padding: 0;
+  color: #FFFFFF;
+  opacity: 1;
+  height: 45px !important;
+  font-size: 1.3rem !important;
+}
+
+.admin-sidebar .mat-list-option:hover {
+  color: #49d0d0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+}
+
+.admin-sidebar .mat-list-single-selected-option {
+  color: #49d0d0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+}
+
+.admin-sidebar .mat-list-item-content {
+  padding: 0 0 0 8px !important;
+}
+
+.admin-sidebar .mat-icon {
+  font-size: 22px !important;
+  width: 22px !important;
+  height: 22px !important;
+  line-height: 20px !important;
 }
 
 
@@ -139,4 +566,8 @@
 .mat-dialog-container {
   padding: 10px !important
 }
+
+
+
+
 

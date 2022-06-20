@@ -1,0 +1,6 @@
+<ng-container *ngIf="wrapperStyle">
+  <div [ngClass]="wrapperStyle.isOpen ? wrapperStyle.openClass : wrapperStyle.closeClass"
+       class="admin-wrapper ">
+    <router-outlet></router-outlet>
+  </div>
+</ng-container>

@@ -1,0 +1,15 @@
+<ng-container *ngIf="sidebarStyle">
+  <aside [ngClass]="sidebarStyle.isOpen ? sidebarStyle.openClass : sidebarStyle.closeClass" class="admin-sidebar">
+    <mat-selection-list [multiple]="false">
+      <mat-list-option (click)="onSelect(link)"
+                       *ngFor="let link of adminSideBarLinks"
+                       [selected]="link.isActive">
+        <mat-icon mat-list-icon matTooltip="{{link.name}}" matTooltipClass="sidebarTooltip"
+                  matTooltipHideDelay="0" matTooltipPosition="after"
+                  matTooltipShowDelay="50">{{link.icon}}</mat-icon>
+        <div mat-line>{{link.name}}</div>
+      </mat-list-option>
+    </mat-selection-list>
+  </aside>
+</ng-container>
+
