@@ -1,6 +1,9 @@
 @import "karma.variables.css";
 
 @media screen and (max-width: 992px) {
+  body {
+    font-size: var(--font-size-sm) !important;
+  }
   .announcement-div label {
     font-size: 1.4rem !important;
   }

@@ -3163,7 +3163,7 @@ textarea.form-control-lg {
   --bs-card-cap-padding-y: 0.5rem;
   --bs-card-cap-padding-x: 1rem;
   --bs-card-cap-bg: rgba(0, 0, 0, 0.03);
-  --bs-card-bg: #fff;
+  --bs-card-bg: var(--bs-card-bg);
   --bs-card-img-overlay-padding: 1rem;
   --bs-card-group-margin: 0.75rem;
   position: relative;
@@ -3177,6 +3177,28 @@ textarea.form-control-lg {
   background-clip: border-box;
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
+}
+
+.card-outline-blue {
+  border-top: 3px solid var(--bs-blue) !important
+}
+.card-outline-red {
+  border-top: 3px solid var(--bs-red) !important
+}
+.card-outline-success {
+  border-top: 3px solid var(--bs-success) !important
+}
+.card-outline-warning {
+  border-top: 3px solid var(--bs-warning) !important
+}
+.card-outline-info {
+  border-top: 3px solid var(--bs-info) !important
+}
+.card-outline-teal {
+  border-top: 3px solid var(--teal-active) !important
+}
+.card-outline-dark {
+  border-top: 3px solid var(--bs-dark) !important
 }
 
 .card > hr {
@@ -3206,14 +3228,34 @@ textarea.form-control-lg {
   border-top: 0;
 }
 
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
+  background-color: var(--bs-card-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+.card-header:first-child {
+  border-radius: var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) 0 0;
+}
+
+.card-link + .card-link {
+  margin-left: var(--bs-card-spacer-x);
+}
+
 .card-body {
   flex: 1 1 auto;
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+  background-color: var(--bs-card-bg);
+  min-height: 100px;
 }
 
 .card-title {
   font-family: var(--font-sans-serif);
-  margin-bottom: var(--bs-card-title-spacer-y);
+}
+.card-title i {
+  margin: 0 5px 0 0;
 }
 
 .card-subtitle {
@@ -3224,21 +3266,6 @@ textarea.form-control-lg {
 
 .card-text:last-child {
   margin-bottom: 0;
-}
-
-.card-link + .card-link {
-  margin-left: var(--bs-card-spacer-x);
-}
-
-.card-header {
-  padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
-  margin-bottom: 0;
-  background-color: var(--bs-card-cap-bg);
-  border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
-}
-
-.card-header:first-child {
-  border-radius: var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) 0 0;
 }
 
 .card-footer {

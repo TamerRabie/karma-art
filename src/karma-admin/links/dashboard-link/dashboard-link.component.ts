@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {AdminService} from "../../services/AdminService";
+import {AppRoutesService} from "../../../helpers/AppRoutesService";
 
 @Component({
   selector: 'dashboard-link',
@@ -7,10 +9,13 @@ import {Component, OnInit} from '@angular/core';
 })
 export class DashboardLinkComponent implements OnInit {
 
-  constructor() {
+  constructor(public adminService: AdminService,
+              private appRoutesService: AppRoutesService) {
+
   }
 
   ngOnInit(): void {
+
   }
 
 }
